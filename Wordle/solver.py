@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('valid_answers.csv')
+df = pd.read_csv('wordle_answers.csv')
 
 def count_vowels(word):
     vowels = 'aeiouAEIOU'

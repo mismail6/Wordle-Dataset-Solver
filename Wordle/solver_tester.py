@@ -33,7 +33,7 @@ def count_vowels(word):
 
 attempt_count = []
 for i in range(500):
-    df = pd.read_csv('valid_answers.csv')
+    df = pd.read_csv('wordle_answers.csv')
     df['num_vowels'] = df['word'].apply(count_vowels)
     dv = df[df['num_vowels'] == 0]
 
