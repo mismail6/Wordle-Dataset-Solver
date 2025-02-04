@@ -1,4 +1,5 @@
 import pandas as pd
+from wordle_scraper import WordleScraper
 
 df = pd.read_csv('wordle_answers.csv')
 
@@ -11,9 +12,10 @@ df['num_vowels'] = df['word'].apply(count_vowels)
 dv = df[df['num_vowels'] == 3]
 
 
-random_row1 = df.sample(n=1)
-answer = str(random_row1['word'].values[0])
-# answer = 'spear'
+# Today's New York Times Wordle
+scraper = WordleScraper()
+answer = scraper.get_wordle_for_today().lower()
+print("Today's Wordle: ", answer)
 
 print()
 print('Total words: ', df['word'].count())
@@ -61,4 +63,3 @@ while answer != guess:
 
 print()
 print("Total Attempts: ", attempts)
-
