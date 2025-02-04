@@ -1,3 +1,4 @@
+The wordle_scraper gets the daily wordle and the solver mimicks the actual game and tries to guess the wordle in as few tries as possible.
 
 Initially, I wanted to consider a Deep Learning based approach to efficiently solve wordle. However, after implementing an algorithm to filter out possible words after each guess, I realized a simple game like Wordle doesn't really need the power of ML.
 
